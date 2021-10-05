@@ -6,20 +6,15 @@ package com.venger;
         - если число кратно и 3 и 5 то вместо него вывести HelloWorld*/
 public class NumbersFrom1to100 {
     public static void main(String[] args) {
-        int i = 0;
-        while (i++ != 100) {
-            if (i % 3 != 0 && i % 5 != 0) {
-                System.out.printf("%4d", i);
-            }
+        for (int i = 0; i <= 100; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                System.out.print("\t HelloWorld");
+                System.out.println("HelloWorld");
+            } else if (i % 3 == 0) {
+                System.out.println("Hello");
+            } else if (i % 5 == 0) {
+                System.out.println("World");
             } else {
-                if (i % 3 == 0) {
-                    System.out.print("\t Hello");
-                }
-                if (i % 5 == 0) {
-                    System.out.print("\t World");
-                }
+                System.out.println(i);
             }
         }
     }
