@@ -3,10 +3,17 @@ package com.venger;
 
 public class StringNumbers {
     public static void main(String[] args) {
+
+        System.out.println(createString());
+    }
+
+    private static String createString() {
+        StringBuilder strNumbers = new StringBuilder();
         for (int i = 1; i <= 30; i++) {
-            StringBuilder strNumbers = new StringBuilder();
+            strNumbers.append("(");
             strNumbers.append(i);
-            System.out.printf("(%s)", strNumbers);
+            strNumbers.append(")");
         }
+        return strNumbers.toString();
     }
 }
